@@ -39,4 +39,3 @@ python render.py --demo --out preview.png
 
 - Auto refresh on WiFi connect (DHCP hook). Needs testing on your firmware first.
 - To-do list and headlines.
-- Whether the `nickel_wifi :autoconnect` line in the NickelMenu file matches your NickelMenu version is unchecked.
