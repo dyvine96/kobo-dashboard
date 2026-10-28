@@ -1,6 +1,3 @@
-# NickelMenu entries for the dashboard.
-# "Show dashboard" draws the last downloaded image right away.
-# "Refresh dashboard" turns WiFi on, downloads the newest image, then shows it.
-menu_item :main :Show dashboard :cmd_spawn :quiet :/mnt/onboard/.adds/dashboard/show.sh
+# NickelMenu entry: "refresh now". Turns WiFi on, then downloads the newest dashboard image.
 menu_item :main :Refresh dashboard :nickel_wifi :autoconnect
-  chain_success :cmd_spawn :quiet :/mnt/onboard/.adds/dashboard/refresh_and_show.sh
+  chain_success :cmd_spawn :quiet :/mnt/onboard/.adds/dashboard/fetch.sh
