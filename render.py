@@ -162,7 +162,7 @@ def render(now, wx, events, out_path, error=None):
     else:
         shown = 0
         for s, e, title, all_day in events:
-            if y > H - 110:
+            if y > H - 150:
                 break
             if all_day:
                 d.text((MARGIN, y), "ALL DAY", font=font(18, True), fill=90)
@@ -176,7 +176,7 @@ def render(now, wx, events, out_path, error=None):
             y += 16
             shown += 1
         if shown < len(events):
-            d.text((MARGIN, y), f"+ {len(events) - shown} more", font=small, fill=90)
+            d.text((MARGIN, H - 92), f"+ {len(events) - shown} more", font=small, fill=90)
 
     # Footer
     d.line((MARGIN, H - 56, W - MARGIN, H - 56), fill=0, width=1)
